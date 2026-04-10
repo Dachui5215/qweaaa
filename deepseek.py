@@ -85,14 +85,14 @@ for msg in st.session_state.msgs:
         st.chat_message(msg["role"]).write(msg["content"])
 
 # ---------- 用户输入 ----------
-if prompt := st.chat_input("和 DeepSeek 说点什么吧..."):
+if prompt := st.chat_input("和你的天宇男神说点什么吧..."):
     # 添加用户消息到历史
     st.session_state.msgs.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
 
     # 调用 API 生成回复
     with st.chat_message("assistant"):
-        with st.spinner("思考中..."):
+        with st.spinner("男神在思考中，不要催..."):
             response = client.chat.completions.create(
                 model="deepseek-chat",
                 messages=st.session_state.msgs,
