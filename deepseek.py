@@ -49,7 +49,7 @@ import os
 # 加载本地 .env 文件（本地开发用）
 load_dotenv()
 
-st.title("DeepSeek 聊天测试")
+st.title("天宇男神小助手————你值得拥有！")
 
 # ---------- 安全获取 API Key ----------
 api_key = None
